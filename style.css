@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+
+    
+}
+
+fieldset {
+    height: 520px;
+    width: 380px;
+    background-color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 4px rgba(163, 163, 163, 0.8);
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid #a4508b;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 12px;
+    margin: 0 12px;
+    position: relative;
+}
+
+.field label {
+    display: inline-block;
+    margin-bottom: 4px;
+
+    font-weight: bold;
+}
+
+.field input {
+    outline: none;
+    border: 1px solid #a4508b5e;
+    padding: 8px 8px;
+}
+
+input:focus {
+    border: 1px solid #a4508b;
+}
+
+.field.error input{
+    border: 1px solid rgb(248, 50, 50);
+}
+
+.field.success input {
+    border: 1px solid rgb(63, 230, 63);
+}
+
+.field i {
+    position: absolute;
+    top: 28px;
+    right: 4px;
+    
+    font-size: 22px;
+
+    visibility: hidden;
+}
+
+.field.error i#error{
+    visibility: visible;
+    color: rgb(248, 50, 50);
+}
+
+.field.success i#check{
+    visibility: visible;
+    color: rgb(63, 230, 63);
+}
+
+.field small {
+    color: rgb(248, 50, 50);
+
+    visibility: hidden;
+    padding-top: 3px;
+}
+
+.field.error small {
+    visibility: visible;
+}
+
+button {
+    width: 100%;
+    
+    border: none;
+    padding: 12px;
+
+    background-color: rgb(63, 230, 63);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s background;
+}
+
+button:hover {
+    background-color: rgb(53, 199, 53);
+}
+
+.success-message {
+    text-align: center;
+    position: fixed;
+    top: -100px;
+    right: 15px;
+
+    border: 1px solid rgb(53, 199, 53);
+    border-radius: 8px;
+    background-color: rgb(53, 199, 53);
+    padding: 24px 36px;
+
+    transition: all 0.6s ease-out;
+    transform: translate3d(0, -100px, 0);
+
+    visibility: hidden;
+}
+
+.success-message.show {
+    visibility: visible;
+    transform: translate3d(0, 115px, 0);
+}
+
+.success-message p {
+    color: white;
+    font-size: 18px;
+}

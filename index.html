@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="success-message" id="success-message">
+        <p>Congratulations!<br> Your account has been created!</p>
+    </div>
+    <form id="form">
+        <fieldset>
+            <h2>Create Account</h2>
+
+            <div class="field">
+                <label for="username">Username</label>
+                <input 
+                    id="username"
+                    type="text" 
+                    placeholder="nickname478sk8" 
+                >
+                <i id="error" class="material-icons">error_outline</i>
+                <i id="check" class="material-icons">check_circle_outline</i>
+                <small>Error msg</small>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input 
+                    id="email"
+                    type="email" 
+                    placeholder="email@myemail.com" 
+                >
+                <i id="error" class="material-icons">error_outline</i>
+                <i id="check" class="material-icons">check_circle_outline</i>
+                <small>Error msg</small>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input 
+                    id="password"
+                    type="password" 
+                    placeholder="Password" 
+                >
+                <i id="error" class="material-icons">error_outline</i>
+                <i id="check" class="material-icons">check_circle_outline</i>
+                <small>Eror msg</small>
+            </div>
+
+            <div class="field">
+                <label for="pw-check">Password Check</label>
+                <input 
+                    id="pw-check"
+                    type="password" 
+                    placeholder="Repeat your Password" 
+                >
+                <i id="error" class="material-icons">error_outline</i>
+                <i id="check" class="material-icons">check_circle_outline</i>
+                <small>Error msg</small>
+            </div>
+
+            <div class="field">
+                <button id="button" type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
